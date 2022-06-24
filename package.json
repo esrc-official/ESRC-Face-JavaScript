@@ -1,6 +1,6 @@
 {
   "name": "ESRC-Face-JavaScript",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "ESRC Face JavaScript Basic Sample",
   "main": "index.js",
   "scripts": {
