@@ -1,12 +1,12 @@
 const { body } = require("./const")
 const { ESRCAction } = require("./ESRCAction");
 const { Camera } = require("./components/Camera");
-const { Canvas } = require("./components/Canvas");
+// const { Canvas } = require("./components/Canvas");
 const { Spinner } = require("./components/Spinner");
 
 const esrc = new ESRCAction();
 const camera = new Camera();
-const canvas = new Canvas();
+// const canvas = new Canvas();
 let isRunning = false;
 
 // Start spinner
@@ -78,10 +78,12 @@ function start() {
             // Feed frame on ESRC
             esrc.feed(frame, id);
         }
-
+        
         // Draw
-        console.log(esrc.basicFacialExpression.toString());
-        canvas.draw(esrc.face, esrc.facialLandmark, esrc.basicFacialExpression, esrc.valenceFacialExpression);
+        // canvas.draw(esrc.face, esrc.facialLandmark, esrc.basicFacialExpression, esrc.valenceFacialExpression);
+        document.getElementById("face").innerHTML = "Face=" + esrc.face.getIsDetect();
+        document.getElementById("basicFacialExpression").innerHTML = "Basic Facial Exp.=" + esrc.basicFacialExpression.getEmotionStr();
+        document.getElementById("valenceFacialExpression").innerHTML = "Valence Facial Exp.=" + esrc.valenceFacialExpression.getEmotionStr();
     });
 }
 

@@ -41,7 +41,7 @@ class ESRCAction {
                 this.handler = new ESRCHandler();
                 this.handler.onAnalyzeMeasureEnv = function(_measureEnv) {
                     // console.log("onAnalyzeMeasureEnv: " + _measureEnv.toString());
-                    ESRCAction.getInstance().measureEnv.setFace(_measureEnv);
+                    ESRCAction.getInstance().measureEnv.setMeasureEnv(_measureEnv);
                 }
                 this.handler.onDetectedFace = function(_face) {
                     // console.log("onDetectedFace: " + _face.toString());
