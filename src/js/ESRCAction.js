@@ -72,6 +72,13 @@ class ESRCAction {
     }
 
     start() {
+        this.measureEnv = new ESRCType.ESRCMeasureEnv();
+        this.face = new ESRCType.ESRCFace();
+        this.facialLandmark = new ESRCType.ESRCFacialLandmark();
+        this.facialActionUnit = new ESRCType.ESRCFacialActionUnit();
+        this.basicFacialExpression = new ESRCType.ESRCBasicFacialExpression();
+        this.valenceFacialExpression = new ESRCType.ESRCValenceFacialExpression();
+
         ESRC.start(this.property, this.handler);
     }
 
