@@ -38,18 +38,30 @@
 
         <div class="contents">
             <div class="desc">
-                Start face analysis on ESRC by using your webcam.
-                <br> This show how ESRC Face works with face detection, facial landmark detection, facial action unit analysis, and facial expression recognition.
+                Start face analysis on ESRC Face by using your webcam.
+                <br> This show how ESRC Face works with face detection, facial landmark detection, facial action unit
+                analysis and facial expression recognition.
                 <div class="download">
-                    <a href="https://github.com/esrc-official/ESRC-Face-JavaScript/" target="blank" class="download-sample">Download Sample</a>
+                    <a href="https://github.com/esrc-official/ESRC-Face-JavaScript/" target="blank"
+                        class="download-sample">Download Sample</a>
                 </div>
             </div>
             <div class="form">
                 <video id="video" width="640" height="480"></video>
-                <!-- <canvas id="canvas" width="640" height="480"></canvas> -->
-                <p class="result" id="face">Face</p>
-                <p class="result" id="basicFacialExpression">Basic Facial Exp.</p>
-                <p class="result" id="valenceFacialExpression">Valence Facial Exp.</p>
+                <div class="upper-line-container">
+                    <div class="card-container" id="face-container">
+                        <div class="title-box">Face</div>
+                        <div class="value-box" id="face-value">NONE</div>
+                    </div>
+                    <div class="card-container" id="basic-facial-exp-container">
+                        <div class="title-box">Basic Facial Exp.</div>
+                        <div class="value-box" id="basic-facial-exp-value">NONE</div>
+                    </div>
+                    <div class="card-container" id="valence-facial-exp-container">
+                        <div class="title-box">Valence Facial Exp.</div>
+                        <div class="value-box" id="valence-facial-exp-value">NONE</div>
+                    </div>
+                </div>
                 <button type="button" class="button" id="start-stop-button">START</button>
             </div>
         </div>

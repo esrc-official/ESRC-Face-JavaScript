@@ -70,7 +70,7 @@ class ESRCAction {
             }
         });
     }
-
+    
     start() {
         this.measureEnv = new ESRCType.ESRCMeasureEnv();
         this.face = new ESRCType.ESRCFace();
